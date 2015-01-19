@@ -1,5 +1,5 @@
-StudyBuddy is a web app developed by a team od OSU students.
+StudyBuddy is a web app developed by a team of OSU students.
 
-StudyBuddy is supposed to help facilitate learnig by giving students a place to ask questions and get help from their peers.
+StudyBuddy is supposed to help facilitate learning by giving students a place to ask questions and get help from their peers.
 
-I primairly worked on connecting the course catalog's commenting system with each course, the twitter scrapper "#studybuddy," and the contact page.
+I primarily worked on connecting the course catalog's commenting system with each course, the twitter scrapper "#studybuddy," and the contact page.
