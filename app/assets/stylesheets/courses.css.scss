@@ -1,0 +1,21 @@
+// Place all the styles related to the Courses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+p.title{
+	text-align: center;
+	font-size: 25px;
+}
+div.course_info{
+	text-align:center;
+}
+
+div.comment_info{
+	padding-top: 10px;
+	border: 1px solid #000;
+	border-radius: 10px;
+
+}
+div.comment_info p{
+	padding-left: 10px;
+}

@@ -1,0 +1,29 @@
+// Place all the styles related to the store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#catalog{
+	text-align:center;
+	color: white;
+	font-size: 50px;
+}
+
+.detail{
+	margin-left: 50px;
+	font-size: 15px;
+}
+
+.title{
+	color:#00063F;
+	margin-left: 50px;
+	line-height: 85%;
+}
+
+.detail div {
+	text-align:left;
+	color:#00063F;
+}
+
+.entry h3{
+	font-size:20px;
+}

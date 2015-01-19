@@ -1,0 +1,13 @@
+syntax: glob
+app/assets/stylesheets/say.css.scss
+app/controllers/say_controller.rb
+app/views/say/goodbye.html.erb
+app/views/say/hello.html.erb
+app/views/say/hello.html.erb~
+test/controllers/say_controller_test.rb
+test/helpers/say_helper_test.rb
+hgrc
+tmp/pids/server.pid
+app/assets/stylesheets/application.css.orig
+log/test.log
+log/development.log

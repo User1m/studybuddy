@@ -1,0 +1,23 @@
+<% if notice %>
+<p id="notice"><%= notice %> </p>
+<% end %>
+</br>
+<h1 id = "catalog"> Class Catalog</h1></br></br>
+
+<% @courses.each do |course| %>
+
+  <div class="entry span5">
+    <h3 class = "title"><%= course.title %></h3>
+	<div class = "detail">
+		<div class="professor"><%= course.professor %></span>
+		</div>
+		<div class="time"><%= course.time %></span>
+		</div>
+		<div class="location"><%= course.location %></span>
+		</div></br>
+	<div class = "AddToScheduleButton">
+    <%= button_to 'Add to Schedule', line_items_path(:course_id => course) %>
+	</div>
+    </div>
+  </div>
+<% end %>

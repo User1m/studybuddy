@@ -1,0 +1,35 @@
+<div id="product_list">
+<h1>Listing courses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Professor</th>
+      <th>Time</th>
+      <th>Location</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @courses.each do |course| %>
+      <!--the following line isn't doing anthing right now, but want to format display-->
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td class="title"><%= course.title %></td>
+        <td><%= course.professor %></td>
+        <td><%= course.time %></td>
+        <td><%= course.location %></td>
+        <td><%= link_to 'Show', course %></td>
+        <td><%= link_to 'Edit', edit_course_path(course) %></td>
+        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<%= link_to 'New Course', new_course_path %>

@@ -1,0 +1,108 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: image-url("twitter/bootstrap/glyphicons-halflings.png");
+@iconWhiteSpritePath: image-url("twitter/bootstrap/glyphicons-halflings-white.png");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+@fontAwesomeEotPath: asset-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: asset-url("fontawesome-webfont.eot?#iefix");
+@fontAwesomeWoffPath: asset-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-url("fontawesome-webfont.svg#fontawesomeregular");
+
+// Font Awesome
+@import "fontawesome/font-awesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+
+.wrapper{
+	background-color: #CFE4E5;
+	font-family: 'Alegreya Sans';
+}
+.tall{
+	min-height: 100%;
+	height: auto;
+}
+
+.container{
+	background-color: #A3DBE3;
+	min-height: 100%;
+	height: auto;
+	align: center;
+}
+
+.navbar{
+	background-color: white;
+	height: 50px;
+}
+
+#first{
+	float:left;
+}
+
+li div{
+	float:right;
+	width:33.3%;
+}
+//temporary navbar spacing solution
+li div {
+	padding-left:120px;
+}
+
+.nav{
+	font-size: 200%;
+}
+
+.topbar{
+	background-color: #00063F;
+	color: white;
+	height:80px;
+	padding: 20px;
+}
+
+.ad{
+	height: 300px;
+	background-color: white;
+}
+
+.menu{
+	height: 350px;
+	background-color: #999999;
+}
+
+.icon{
+	height: 50px;
+	padding-left: 50px;
+	font-size: 30px;
+	letter-spacing:10px;
+	font-family: 'Alegreya Sans';
+}
+
+.pic{
+	padding: 50px;
+	height: 200px;
+}
+
+.outline{
+	background-color: #A3DBE3;
+	height: 10px;
+}
+
+.menu{
+	background-color:#A3DBE3;
+}

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  professor: MyString
+  time: MyString
+  location: MyString
+
+two:
+  title: MyString
+  professor: MyString
+  time: MyString
+  location: MyString
+
+webApps:
+  title: CSE 3901 Web Applications
+  professor: Naeem Shareef
+  time: 10:20 AM
+  location: Dreese 0264

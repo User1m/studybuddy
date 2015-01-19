@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>StudyBuddy</title>
+	<%= stylesheet_link_tag :all %>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
+
+	<link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body class= "wrapper">
+	<div class= "container">	
+		<div class="topbar">
+			
+			<%= link_to image_tag("studybuddy.png", :class => "icon"), {:controller => "access", :action => 'index'} %>
+			<%= link_to image_tag("text.png"), {:controller => "access", :action => 'index'}  %>
+			
+			<!-- ><%= @page_title || "StudyBuddy" %> -->
+		</div>
+		<nav class="navbar">
+			<ul class="nav">
+				<li><%= link_to("Home", {:controller => "access", :action => 'index'})%></li>
+				<li><%= link_to("Course Catalog", {:controller => "store", :action => 'index'})%></li>
+				<% if session[:name] != nil %>
+				<li><%= link_to("My Schedule", :controller => 'schedules', :action => 'show', :id => session[:user_id]) %></li>
+				<li><%= link_to("Logout", {:controller => "access", :action => 'logout'})%></li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+				<% end %>
+				<li><%= link_to("#StudyBuddy", {:controller => "access", :action => 'blog'})%></li>
+				<li><%= link_to("Contact", {:controller => "access", :action => 'contact'})%></li>
+				<li><%= link_to("FAQs", {:controller => "access", :action => 'faqs'})%></li>
+			</ul></br>
+		</nav>
+
+		<div id="main" class="tall">
+			<% if !flash[:notice].blank? %>
+			<div class="notice ">
+				<strong><%= flash[:notice] %></strong>
+			</div>
+			<% end %>
+			<% if !flash[:error].blank? %>
+			<div class="notice">
+				<strong><%= flash[:error] %></strong>
+			</div>
+			<% end %>
+			<div id="content">
+				<%= yield %>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

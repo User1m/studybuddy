@@ -1,0 +1,62 @@
+<div class="course_info">
+  <p><h4><em>Title:</em>
+    <%= @course.title %></h4>
+  </p>
+
+  <p><h4><em>Professor:</em>
+    <%= @course.professor %></h4>
+  </p>
+
+  <p><h4><em>Time:</em>
+    <%= @course.time %></h4>
+  </p>
+
+  <p><h4><em>Location:</em>
+    <%= @course.location %></h4>
+  </p>
+</div>
+
+
+<h2>Comments:</h2>
+<div class="centerReg">
+  <% @course.comments.each do |comment| %>
+  <div class="comment_info">
+    <p>
+      <strong>Username:</strong> <%= comment.user %>
+    </p>
+    <p>
+      <strong>Title:</strong> <%= comment.title %>
+    </p>
+    <p>
+      <strong>Comment:</strong> <%= comment.body %>
+    </p>
+    <p>
+      <strong>Posted at:</strong> <%= comment.created_at %>
+    </p>
+  </div>
+  <% end %>
+
+</div>
+
+<hr>
+<h2>Add a comment:</h2>
+<div class="centerComments">
+  <%= form_for([@course, @course.comments.build]) do |f| %>
+  <p>
+    <%= f.label :user %> <br />
+    <%= f.text_field(:user, value: "#{session[:name]}", :readonly =>true) %>
+  </p>
+  <p>
+    <%= f.label :title %> <br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+</div>
+
